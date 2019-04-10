@@ -4,8 +4,9 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "node server",
-    "start-dev": "webpack -w & nodemon server.js"
+    "start": "npm run build-watch & npm run start-server",
+    "start-server": "nodemon --watch server main.js -e html,js,css",
+    "build-watch": "webpack -w"
   },
   "author": "",
   "license": "ISC",
@@ -16,7 +17,11 @@
     "morgan": "^1.9.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.0"
+    "react-redux": "^7.0.1",
+    "react-router-dom": "^5.0.0",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
