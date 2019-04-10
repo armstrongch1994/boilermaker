@@ -1,10 +1,7 @@
 body {
   font-family: arial, sans-serif;
-}
-
-/* abolish serifs */
-body {
-  font-family: arial, sans-serif;
+  background-color: white;
+  margin: 0;
 }
 
 /* size */
@@ -183,7 +180,9 @@ body {
 .bg-white {
   background-color: #ffffff;
 }
-
+.light-blue {
+  background-color: #d0ddf2;
+}
 /* buttons */
 .btn {
   border: none;
@@ -216,4 +215,12 @@ body {
 img {
   height: 100px;
   width: 100px;
+}
+
+/*navigation */
+#main-nav {
+  height: 60px;
+}
+#footer {
+  height: 150px;
 }
