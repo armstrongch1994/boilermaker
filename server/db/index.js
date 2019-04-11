@@ -1,6 +1,6 @@
 'use strict';
 
-const db = require('./database');
+const db = require('./db');
 
 // The purpose of this module is to bring your Sequelize instance (`db`) together
 // with your models (which you should define in separate modules in this directory).
@@ -9,8 +9,12 @@ const db = require('./database');
 // const Puppy = require('./puppy')
 // const Owner = require('./owner')
 
-const Boilermaker = require('./boilermaker');
+// const Boilermaker = require('./boilermaker');
+// const User = require('./models/user.js/index.js');
 
+require('./models');
+
+module.exports = db;
 // After you've required all of your models into this module, you should establish
 // associations (https://sequelize-guides.netlify.com/association-types/) between them here as well!
 
@@ -18,8 +22,5 @@ const Boilermaker = require('./boilermaker');
 //
 // Puppy.belongsTo(Owner)
 
-module.exports = {
-  // Include your models in this exports object as well!
-  db,
-  Boilermaker,
-};
+module.exports = db;
+// Include your models in this exports object as well!

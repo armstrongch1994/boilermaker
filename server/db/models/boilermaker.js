@@ -1,8 +1,6 @@
 'use strict';
 
-'use strict';
-
-const db = require('./database');
+const db = require('../db');
 const Sequelize = require('sequelize');
 
 const Boilermaker = db.define('boilermaker', {
