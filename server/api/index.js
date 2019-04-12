@@ -1,10 +1,9 @@
-'use strict';
+// this creates our router and if any requests come in and it starts with /users => go into the users router
 const router = require('express').Router();
-
-// any routes that you put here are ALREADY mounted on /api
-// this file should almost be like a table of contents for the routers you create!
+module.exports = router;
 
 router.use('/puppies', require('./puppies'));
+router.use('/users', require('./users'));
 
 // If someone makes a request that starts with `/api`,
 // but you DON'T have a corresponding router, this piece of
@@ -16,5 +15,3 @@ router.use((req, res, next) => {
   error.status = 404;
   next(error);
 });
-
-module.exports = router;
